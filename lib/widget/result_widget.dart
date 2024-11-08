@@ -13,6 +13,14 @@ class ResultWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        centerTitle: true,
+        title: const Text(
+          "BMI Result",
+        ),
+        backgroundColor: primsryColor,
+      ),
       backgroundColor: primsryColor,
       body: Center(
         child: Column(

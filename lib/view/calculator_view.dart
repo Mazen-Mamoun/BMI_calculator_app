@@ -22,6 +22,7 @@ class _CalculatorViewState extends State<CalculatorView> {
     return Scaffold(
       backgroundColor: primsryColor,
       appBar: AppBar(
+        elevation: 0,
         centerTitle: true,
         backgroundColor: primsryColor,
         title: const Text(

@@ -27,13 +27,26 @@ class MaterilaButtonView extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return ResultWidget(
-                    gender: isMale ? "Male" : "Female",
-                    result: result,
-                    age: age);
+                return ResultView(isMale: isMale, result: result, age: age);
               },
             ),
           );
         });
+  }
+}
+
+class ResultView extends StatelessWidget {
+  const ResultView(
+      {super.key,
+      required this.isMale,
+      required this.result,
+      required this.age});
+  final bool isMale;
+  final double result;
+  final int age;
+  @override
+  Widget build(BuildContext context) {
+    return ResultWidget(
+        gender: isMale ? "Male" : "Female", result: result, age: age);
   }
 }
